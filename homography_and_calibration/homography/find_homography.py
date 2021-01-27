@@ -16,7 +16,7 @@ def main():
         TO UNDERSTAND THE CONCEPT OF HOMOGRAPHY, REFER TO THE FOLLOWING LINK:
         https://learnopencv.com/homography-examples-using-opencv-python-c/
     '''
-    # This is the dimension of the 
+    # This is the dimension of the workspace in cms
     WORKSPACE_DIM={"Width": 250,
                    "Height": 250}
 
