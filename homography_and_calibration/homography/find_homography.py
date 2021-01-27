@@ -16,7 +16,7 @@ def main():
         TO UNDERSTAND THE CONCEPT OF HOMOGRAPHY, REFER TO THE FOLLOWING LINK:
         https://learnopencv.com/homography-examples-using-opencv-python-c/
     '''
-    # This is the dimension of the workspace in cms
+    # This is the dimension of the testbed in cms
     WORKSPACE_DIM={"Width": 250,
                    "Height": 250}
 
@@ -55,7 +55,7 @@ def main():
         for tag in results:
             center=display_tag_center(tag,rectified_img)
             # UNCOMMENT TO SEE THE BOUNDING BOX AROUND THE APRIL TAGS
-            # display_tag_boundary(tag,rectified_img)
+            display_tag_boundary(tag,rectified_img)
             
             display_tag_id(tag,rectified_img)
             # The coordinates of the centers of the april 
@@ -80,21 +80,24 @@ def main():
     
     h, status = cv2.findHomography(np.float32(image_points),np.float32(ground_truth))
     np.savez('homography.npz',homography=h)
-    # THIS PART OF THE CODE CAN BE USED TO CHECK THE ACCURACY OF THE RESULTS. 
+    
+    homography=np.load('homography.npz')
+    # # THIS PART OF THE CODE CAN BE USED TO CHECK THE ACCURACY OF THE RESULTS. 
     # COMPARE THE W/SCALE_FACTOR AND H/SCALE_FACTOR WITH THE REAL DIMENSIONS OF THE APRILTAGS.
     while(1):
         ret, img= capture.read()
         rectified_img=cv2.undistort(img, intrinsics['mtx'], intrinsics['dist'], None)
         gray= cv2.cvtColor(rectified_img, cv2.COLOR_BGR2GRAY)
-        im_out = cv2.warpPerspective(gray, h, 
+        im_out = cv2.warpPerspective(gray, homography['homography'], 
                 (int(WORKSPACE_DIM["Height"]),int(WORKSPACE_DIM["Width"])))
         
         results = detector.detect(im_out)
         for tag in results:
             if tag.tag_id==12:
                 pts=np.array(tag.corners,np.int32)
-                print(f"Tag {tag.tag_id}  Co-ordinates: {tag.corners}")
-                print(f"W:{tag.corners[0][0]-tag.corners[2][0]}\n H: {tag.corners[0][1]-tag.corners[1][1]}")
+                corners=tag.corners
+                print(f"Tag {tag.tag_id}  Co-ordinates:\n{corners[0]}\t{corners[1]}\n{corners[2]}\t{corners[3]}")
+                print(f"W:{distance(corners[0],corners[1])}\n H: {distance(corners[1],corners[2])}")
                 pts=pts.reshape((-1,1,2))
                 im_out = cv2.polylines(im_out,[pts],True,(0,255,0),2)
             
@@ -114,9 +117,13 @@ def display_tag_id(tag,rectified_img):
     cv2.putText(rectified_img, str(tag.tag_id),
                 org=(tag.corners[0, 0].astype(int)+10,tag.corners[0, 1].astype(int)+10),
                 fontFace=cv2.FONT_HERSHEY_SIMPLEX,
-                fontScale=0.6,
-                color=(0, 0, 255))
+                fontScale=0.8,
+                thickness=2,
+                color=(100, 100, 255))
     return tag.tag_id
+
+def distance(a,b):
+    return ((a[0]-b[0])**2+(a[1]-b[1])**2)**(1/2)
 
 def scale(ground_truth,WORKSPACE_DIM,origin_offset=0,SCALE_FACTOR=1):
     
