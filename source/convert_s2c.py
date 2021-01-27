@@ -10,7 +10,7 @@ warnings.filterwarnings("ignore")
 import matplotlib.pyplot as plt
 from typing import List
 # add path to the commonroad sumo interface
-sys.path.append(os.path.join(os.path.dirname(os.path.dirname(os.getcwd())),'commonroad-sumo-interface-master'))
+sys.path.append(os.path.join(os.path.dirname(os.path.dirname(os.getcwd())),'commonroad-sumo-interface'))
 from sumo2cr.maps.sumo_scenario import ScenarioWrapper
 from commonroad.common.util import Interval
 from commonroad.scenario.trajectory import State
