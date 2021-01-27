@@ -1,0 +1,10 @@
+dt-apriltags==3.1.1
+numpy==1.19.4
+matplotlib==3.3.3
+Pillow==8.0.1
+Shapely==1.7.1
+lxml==4.6.2
+networkx==2.5
+commonroad-io==2020.3
+
+
