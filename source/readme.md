@@ -21,7 +21,7 @@ You should see a video feed similar to the image as shown below.
 1. To map the trajectory of a moving vehicle(or a robot) on the hardware test bed, first use an april tag of tag_id=1 and place it over the vehicle. Make sure that the tag is facing ceiling camera and the camera can detect it.  
 2. Run the command python3 trajectory.py -i <name_of_network_file>.json in the source directory. Make sure the vehicle is in the camera's field of view.  
 3. If you are using the jet racer for the test bed, turn it on and control it using the example script teleoperation.ipynb the remote controller. The script, trajectory.py will mark the trajectory of the car as it moves on the test bed. Refer to the picture below.
-![illustration2](trajectory_illustration.png)  
+![illustration](trajectory _illustration.png)  
 
 
 
