@@ -21,6 +21,16 @@ Add the following line at the end of your `~/.bashrc` file: `export SUMO_HOME=/u
 5. To install commonroad to sumo interface, clone the following repository outside this repository using the command: `git clone https://gitlab.lrz.de/tum-cps/commonroad-sumo-interface.git`.
 6.change the directory to the commonroad-sumo-interface repository and rename the file `pathConfig_DEFAULT.py` to `pathConfig.py`.
 
+7. Run the command `pip3 show opendrive2lanelet` and copy the `location` where it is installed.  
+
+8. Change the directory to the `opendrive2lanelet` package directory and locate `network.py` file inside it. 
+
+9. Open the network.py in your favourite editor and change line 125 of the code from  
+`scenario = Scenario(dt=dt, benchmark_id=benchmark_id if benchmark_id is not None else "none")`  
+to  
+
+
+
 
 ## Using this repository
 This repository consists of two parts:  
