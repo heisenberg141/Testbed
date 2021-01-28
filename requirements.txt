@@ -7,4 +7,5 @@ lxml==4.6.2
 networkx==2.5
 commonroad-io==2020.3
 opendrive2lanelet==1.2.0
+sumolib==1.8.0
 
