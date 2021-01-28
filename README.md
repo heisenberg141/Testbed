@@ -31,7 +31,7 @@ The configuration needs to be done prior to running the implementation on the te
 After completing the configuration of the testbed and copying the `homography.npz` and `git3_calib_best.npz` into the source directory, you are in the position to run the codes present inside the `source` directory.
 
 The source directory consists of the following scripts:  
-1. `generate_network.py`: This script is used to geenerate the json file for the road network from sumo's opendrive format.  
+1. `generate_network.py`: This script is used to generate the json file for the road network from sumo's opendrive format.  
 2. `generate_json_network.py`: This script is used to convert a commonroad scenario to json file.  
 3. `convert_s2c.py`: This script is used to convert a road network from sumo's opendrive format to commonroad scenario.   
 4. `drawer.py`: This script consists of a drawer class which provides functionality of drawing road network on images.  
