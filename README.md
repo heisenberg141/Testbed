@@ -26,3 +26,14 @@ __2. Using the testbed -__ `source` directory
 
 ### Configuring the Testbed
 The configuration needs to be done prior to running the implementation on the testbed. For complete configuration details, refer to the readme.md file in the `homography_and_calibration` directory.
+
+### Using the testbed
+After completing the configuration of the testbed and copying the `homography.npz` and `git3_calib_best.py` into the source directory, you are in the position to run the codes present inside the `source` directory.
+
+The source directory consists of the following scripts:  
+1. `generate_network.py`:   
+2. `generate_json_network.py`:   
+3. `convert_s2c.py`:  
+4. `drawer.py`:   
+5. `overlay.py`:   
+6. `trajectory.py`: 
