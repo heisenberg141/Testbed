@@ -10,6 +10,6 @@ __1. Overlaying a road network
 2. After creating the road network in netedit and saving it in the `../custom_scenarios/sumo_network` directory, run the following command in a terminal at the source directory: `python3 generate_network.py -i <name_of_your_file>.net.xml`. This will convert the given sumo road network to both, a commonroad scenario `.xml` file and `.json` file, both with the same name as `name_of_your_file`. They are saved at paths   `../custom_scenarios/commonroad_network` and `../custom_scenarios/json_network` respectively.  
 3. After the creation of the `.json` file,connect the ceiling camera to your computer,and  in the source directory run the command `python3 overlay.py -i <name_of_your_file>.json`.
 You should see a video feed similar to the image as shown below.  
-![illustration](overlay_illustration.png | 250)
+![illustration](overlay_illustration.png | width = 250)
 
 
