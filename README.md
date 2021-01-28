@@ -14,7 +14,9 @@
 `sudo add-apt-repository ppa:sumo/stable`   
 `sudo apt-get update`   
 `sudo apt-get install sumo sumo-tools sumo-doc`   
-`sudo apt-get install ffmpeg`
+`sudo apt-get install ffmpeg`  
+`echo "export SUMO_HOME=/usr/share/sumo"`  
+`source ~/.bashrc`
   
 5. To install commonroad to sumo interface, git clone the following repository outside this repository: https://gitlab.lrz.de/tum-cps/commonroad-sumo-interface.git. You may need to change some of the files in order to make the repository compatible with the latest commonroad xml structure. 
 
