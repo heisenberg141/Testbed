@@ -15,7 +15,7 @@
 `sudo apt-get update`   
 `sudo apt-get install sumo sumo-tools sumo-doc`   
 `sudo apt-get install ffmpeg`  
-Add the following line at the end of your `~/.bashrc` file: `"export SUMO_HOME=/usr/share/sumo"`  
+Add the following line at the end of your `~/.bashrc` file: `export SUMO_HOME=/usr/share/sumo`  
 `source ~/.bashrc`
   
 5. To install commonroad to sumo interface, clone the following repository outside this repository using the command: `git clone https://gitlab.lrz.de/tum-cps/commonroad-sumo-interface.git`.
