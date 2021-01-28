@@ -28,6 +28,8 @@ Add the following line at the end of your `~/.bashrc` file: `export SUMO_HOME=/u
 9. Open the network.py in your favourite editor and change line 125 of the code from  
 `scenario = Scenario(dt=dt, benchmark_id=benchmark_id if benchmark_id is not None else "none")`  
 to  
+`scenario = Scenario(scenario_id=1,dt=dt, benchmark_id=benchmark_id if benchmark_id is not None else "none")`
+
 
 
 
