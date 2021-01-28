@@ -37,3 +37,5 @@ The source directory consists of the following scripts:
 4. `drawer.py`: This script consists of a drawer class which provides functionality of drawing road network on images.  
 5. `overlay.py`: This script is used to overlay the custom road scenarios in json format over the video frame captured by the ceiling camera.  
 6. `trajectory.py`: This script is used to map the trajectory of a moving vehicle with the help of april tags to localize the vehicle. 
+
+More description about the implementation details of the scripts and usage is given in the readme file in the `source` directory
