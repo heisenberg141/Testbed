@@ -6,7 +6,8 @@ __The test bed is currently using a single ceiling camera for the global view. A
 
 Open the calibration folder in the `homography_and_calibration` directory. Out of the two python scripts present in the folder, `calib_images.py` is used to capture images with the checkerboard pattern placed at different orientations and locations, and `calib.py` is used to calibrate the camera based on the images captured using `calib_images.py`.
 
-To capture images using `calib_images.py`, connect the ceiling camera to your device and run the script. Place the checkerboard pattern at different orientations and distances and capture the image using the `S` key. Close the script with the `ESC` key. The images get saved inside the `calibration_images` folder. Some sample images which produced good calibration results (*with reprojection error of 0.03*) are present in the folder for reference. 
+To capture images using `calib_images.py`, connect the ceiling camera to your device and run the script. Place the checkerboard pattern at different orientations and distances and capture the image using the `S` key. Close the script with the `ESC` key. The images get saved inside the `calibration_images` folder. Some sample images which produced good calibration results (*with reprojection error of 0.03*) are present in the folder for reference.
+
 The result of the calibration is saved in a `git3_calib_best.npz` file. Since the camera’s intrinsic parameters never change, calibration is a one time process. Save the `.npz`  format file obtained in the source folder of the testbed repository, and the homography folder in the `homography_and_calibration` directory. I have included a sample `git3_calib_best.npz` for the gitup camera present in the lab.
 
 ## Homography 
