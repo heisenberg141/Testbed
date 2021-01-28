@@ -20,7 +20,7 @@
 
 
 ## Using this repository
-**This repository consists of two parts: **
+ __This repository consists of two parts:__  
 #### 1. Configuring the test bed - homography_and_calibration folder
 
 #### 2. Using the testbed - source folder
