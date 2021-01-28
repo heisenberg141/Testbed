@@ -15,10 +15,11 @@
 `sudo apt-get update`   
 `sudo apt-get install sumo sumo-tools sumo-doc`   
 `sudo apt-get install ffmpeg`  
-`echo "export SUMO_HOME=/usr/share/sumo"`  
+Add the following line at the end of your `~/.bashrc` file: `"export SUMO_HOME=/usr/share/sumo"`  
 `source ~/.bashrc`
   
-5. To install commonroad to sumo interface, git clone the following repository outside this repository: https://gitlab.lrz.de/tum-cps/commonroad-sumo-interface.git. You may need to change some of the files in order to make the repository compatible with the latest commonroad xml structure. 
+5. To install commonroad to sumo interface, clone the following repository outside this repository using the command: `git clone https://gitlab.lrz.de/tum-cps/commonroad-sumo-interface.git`.
+6.change the directory to the commonroad-sumo-interface repository and rename the file `pathConfig_DEFAULT.py` to `pathConfig.py`.
 
 
 ## Using this repository
