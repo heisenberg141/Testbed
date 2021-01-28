@@ -20,10 +20,10 @@
 
 
 ## Using this repository
- __This repository consists of two parts:__  
-#### 1. Configuring the test bed - homography_and_calibration folder
+This repository consists of two parts:  
+#### 1. Configuring the test bed - `homography_and_calibration` directory
 
-#### 2. Using the testbed - source folder
+#### 2. Using the testbed - `source` directory
 
 ### Configuring the Testbed
 The configuration needs to be done prior to running the implementation on the testbed. For complete configuration details, refer to the readme.md file in the `homography_and_calibration` driectory
