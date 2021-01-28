@@ -8,17 +8,16 @@ __1. Overlaying a road network
 ## Overlaying a road Network:
 1. For overlaying a road network, you need to make a suitable road network using sumo's netedit tool. Refer to the following tutorials: https://sumo.dlr.de/docs/Tutorials.html. The road network created using sumo is be of the format `.net.xml` and should be saved at the path `../custom_scenarios/sumo_network`. This will ensure smooth working of code.
 
-2. After creating the road network in netedit and saving it in the `../custom_scenarios/sumo_network` directory, run the following command in a terminal at the source directory:  
-`python3 generate_network.py -i <name_of_your_file>.net.xml`  
+2. After creating the road network in netedit and saving it in the `../custom_scenarios/sumo_network` directory, run the following command in a terminal at the source directory: `python3 generate_network.py -i <name_of_your_file>.net.xml`
+
 This will convert the given sumo road network to both, a commonroad scenario `.xml` file and `.json` file, both with the same name as `name_of_your_file`. They are saved at paths   `../custom_scenarios/commonroad_network` and `../custom_scenarios/json_network` respectively.
 
-3. After the creation of the `.json` file,connect the ceiling camera to your computer,and  in the source directory run the command  
-`python3 overlay.py -i <name_of_your_file>.json`.
+3. After the creation of the `.json` file,connect the ceiling camera to your computer,and  in the source directory run the command `python3 overlay.py -i <name_of_your_file>.json`.
 
 You should see a video feed similar to the image as shown below.  
 ![illustration](overlay_illustration.png)  
 
-`overlay.py` has tunable parameters like `CAR_WIDTH` and `ORIGIN` in the main function. The `ORIGIN` parameter can be tuned to properly position the road network over the camera frame, and  the `CAR_WIDTH` can be used to resize the road network so that the car can fit properly on the road.
+`overlay.py` has tuneable parameters like `CAR_WIDTH` and `ORIGIN` in the main function. The `ORIGIN` parameter can be tuned to properly position the road network over the camera frame, and  the `CAR_WIDTH` can be used to resize the road network so that the car can fit properly on the road.
 
 ## Mapping the Trajectory of a Moving Vehicle
 
