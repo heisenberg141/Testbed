@@ -18,9 +18,9 @@ You should see a video feed similar to the image as shown below.
 `overlay.py` has tuneable parameters like `CAR_WIDTH` and `ORIGIN` in the main function. The `ORIGIN` parameter can be tuned to properly position the road network over the camera frame, and  the `CAR_WIDTH` can be used to resize the road network so that the car can fit properly on the road.
 
 ## Mapping the Trajectory of a Moving Vehicle
-1. To map the trajectory of a moving vehicle(or a robot) on the hardware test bed, first use an april tag of tag_id=1 and place it over the vehicle. Make sure that the tag is facing ceiling camera and the camera can detect it.  
-2. Run the command python3 trajectory.py -i <name_of_network_file>.json in the source directory. Make sure the vehicle is in the camera's field of view.  
-3. If you are using the jet racer for the test bed, turn it on and control it using the example script teleoperation.ipynb the remote controller. The script, trajectory.py will mark the trajectory of the car as it moves on the test bed. Refer to the picture below.
+1. To map the trajectory of a moving vehicle(or a robot) on the hardware test bed, first use an april tag of `tag_id=1` and place it over the vehicle. Make sure that the tag is facing ceiling camera and the camera can detect it.  
+2. Run the command `python3 trajectory.py -i <name_of_network_file>.json` in the source directory. Make sure the vehicle is in the camera's field of view.  
+3. If you are using the jet racer for the test bed, turn it on and control it using the example script `teleoperation.ipynb` the remote controller. The script, `trajectory.py` will mark the trajectory of the car as it moves on the test bed. Refer to the picture below.
 ![illustration](trajectory_illustration.png)  
 
 
