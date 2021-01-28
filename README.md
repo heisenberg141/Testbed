@@ -28,7 +28,7 @@ __2. Using the testbed -__ `source` directory
 The configuration needs to be done prior to running the implementation on the testbed. For complete configuration details, refer to the readme.md file in the `homography_and_calibration` directory.
 
 ### Using the testbed
-After completing the configuration of the testbed and copying the `homography.npz` and `git3_calib_best.py` into the source directory, you are in the position to run the codes present inside the `source` directory.
+After completing the configuration of the testbed and copying the `homography.npz` and `git3_calib_best.npz` into the source directory, you are in the position to run the codes present inside the `source` directory.
 
 The source directory consists of the following scripts:  
 1. `generate_network.py`: This script is used to geenerate the json file for the road network from sumo's opendrive format.  
