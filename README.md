@@ -16,7 +16,7 @@
 `sudo apt-get install sumo sumo-tools sumo-doc`   
 `sudo apt-get install ffmpeg`
   
-5. To install commonroad to sumo interface, git clone the following repository outside this repository: https://gitlab.lrz.de/tum-cps/commonroad-sumo-interface.git. You may need to change some of the files in order to make the repository compatible with the latest commonroad xml structure.
+5. To install commonroad to sumo interface, git clone the following repository outside this repository: https://gitlab.lrz.de/tum-cps/commonroad-sumo-interface.git. You may need to change some of the files in order to make the repository compatible with the latest commonroad xml structure. 
 
 
 ## Using this repository
@@ -25,4 +25,4 @@ __1. Configuring the test bed -__ `homography_and_calibration` directory
 __2. Using the testbed -__ `source` directory
 
 ### Configuring the Testbed
-The configuration needs to be done prior to running the implementation on the testbed. For complete configuration details, refer to the readme.md file in the `homography_and_calibration` driectory
+The configuration needs to be done prior to running the implementation on the testbed. For complete configuration details, refer to the readme.md file in the `homography_and_calibration` directory
