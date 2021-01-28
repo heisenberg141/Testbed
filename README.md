@@ -11,7 +11,7 @@
 3. Build and install Opencv 4 from source with contrib packages. Refer to the following link: https://www.pyimagesearch.com/2018/08/15/how-to-install-opencv-4-on-ubuntu/.
 
 4. To install Sumo, run the following commands:
-sudo add-apt-repository ppa:sumo/stable
+' sudo add-apt-repository ppa:sumo/stable '
 sudo apt-get update
 sudo apt-get install sumo sumo-tools sumo-doc 
 sudo apt-get install ffmpeg
