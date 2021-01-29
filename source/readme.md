@@ -23,6 +23,14 @@ You should see a video feed similar to the image as shown below.
 3. If you are using the jet racer for the test bed, turn it on and control it using the example script `teleoperation.ipynb` the remote controller. The script, `trajectory.py` will mark the trajectory of the car as it moves on the test bed. Refer to the picture below.  
 ![illustration](trajectory_illustration.png)  
 
+Rest of the scripts help in seemless running of the above mentioned applications. If you want to add a functionality to the codebase, you can study working of the entire pipeline.
+
+## Common Errors  
+While compiling the repository and running the codes, you may run into the following errors:  
+ __1.__ While running overlay.py or trajectory.py, you may encounter an error message that the ceiling camera cant be detected. In that case, make sure that the camera is connected properly. If nothing seems to work, open the file that is not working in a text editor, identify the line in which video feed is being capured (it should look something like `capture=cv2.VideoCapture(1)`), and try putting some other numbers instead of `1` in the argument. Normally, `2` should work fine.
+ 
+ __2.__ While running generate_network.py, if no matplotlib window is being displayed, refer to the following link: https://www.pyimagesearch.com/2015/08/24/resolved-matplotlib-figures-not-showing-up-or-displaying/
+
 
 
 
